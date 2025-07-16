@@ -294,7 +294,7 @@ const Contact: React.FC = () => {
                         Plot No. 815, B.V.L. Complex, <br />
                         4th Floor, 100Ft. Road, <br />
                         Sri Swamy Ayyappa Co-operative Society,
-                        <br /> Madhapur, Hyderabad - 5000881.
+                        <br /> Madhapur, Hyderabad - 500081.
                       </p>
                     </div>
                   </div>
