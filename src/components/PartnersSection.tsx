@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { partners } from "../data/content";
 import ClientSlider from "./clientsSlider";
 
 const PartnersSection: React.FC = () => {

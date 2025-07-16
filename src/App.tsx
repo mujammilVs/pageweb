@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, Transition } from "framer-motion";
 import Navbar from "./components/Navbar";
 import SubNavbar from "./components/SubNavbar";
 import Footer from "./components/Footer";
@@ -11,6 +11,13 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import RequestConsultant from "./pages/RequestConsultant";
 import ScrollToTop from "./components/ScrollToTop";
+import DigitalBankingServices from "./pages/services/DigitalBankingServices";
+import CorePlatformModernization from "./pages/services/CorePlatformModernization";
+import TransformationConsulting from "./pages/services/TransformationConsulting";
+import BankingCloudServices from "./pages/services/BankingCloudServices";
+import Digidox from "./pages/products/Digidox";
+import Digifabric from "./pages/products/Digifabric";
+import Figiflo from "./pages/products/Figiflo";
 
 const pageVariants = {
   initial: { opacity: 0, y: 20 },
@@ -18,7 +25,7 @@ const pageVariants = {
   exit: { opacity: 0, y: -20 },
 };
 
-const pageTransition = {
+const pageTransition: Transition = {
   type: "tween",
   duration: 0.3,
 };
@@ -27,7 +34,7 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-gray-50 overflow-x-hidden">
         <Navbar />
         <SubNavbar />
 
@@ -62,7 +69,7 @@ function App() {
               }
             />
             <Route
-              path="/products/:productId"
+              path="/products/digidox"
               element={
                 <motion.div
                   variants={pageVariants}
@@ -71,7 +78,35 @@ function App() {
                   exit="exit"
                   transition={pageTransition}
                 >
-                  <Products />
+                  <Digidox />
+                </motion.div>
+              }
+            />
+            <Route
+              path="/products/digifabric"
+              element={
+                <motion.div
+                  variants={pageVariants}
+                  initial="initial"
+                  animate="animate"
+                  exit="exit"
+                  transition={pageTransition}
+                >
+                  <Digifabric />
+                </motion.div>
+              }
+            />{" "}
+            <Route
+              path="/products/figiflo"
+              element={
+                <motion.div
+                  variants={pageVariants}
+                  initial="initial"
+                  animate="animate"
+                  exit="exit"
+                  transition={pageTransition}
+                >
+                  <Figiflo />
                 </motion.div>
               }
             />
@@ -86,6 +121,62 @@ function App() {
                   transition={pageTransition}
                 >
                   <Services />
+                </motion.div>
+              }
+            />
+            <Route
+              path="/services/transformation-consulting"
+              element={
+                <motion.div
+                  variants={pageVariants}
+                  initial="initial"
+                  animate="animate"
+                  exit="exit"
+                  transition={pageTransition}
+                >
+                  <TransformationConsulting />{" "}
+                </motion.div>
+              }
+            />
+            <Route
+              path="/services/core-platform-modernization"
+              element={
+                <motion.div
+                  variants={pageVariants}
+                  initial="initial"
+                  animate="animate"
+                  exit="exit"
+                  transition={pageTransition}
+                >
+                  <CorePlatformModernization />{" "}
+                </motion.div>
+              }
+            />
+            <Route
+              path="/services/digital-banking"
+              element={
+                <motion.div
+                  variants={pageVariants}
+                  initial="initial"
+                  animate="animate"
+                  exit="exit"
+                  transition={pageTransition}
+                >
+                  <DigitalBankingServices />
+                </motion.div>
+              }
+            />
+            <Route
+              path="/services/banking-cloud"
+              element={
+                <motion.div
+                  variants={pageVariants}
+                  initial="initial"
+                  animate="animate"
+                  exit="exit"
+                  transition={pageTransition}
+                >
+                  <BankingCloudServices />
                 </motion.div>
               }
             />

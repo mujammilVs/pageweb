@@ -10,6 +10,7 @@ export interface ServiceCard {
   description: string;
   icon: string;
   features: string[];
+  path: string;
 }
 
 export interface ProductCard {

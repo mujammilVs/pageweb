@@ -179,6 +179,7 @@ const Navbar: React.FC = () => {
                             transition={{ duration: 0.2, ease: "easeOut" }}
                             className="ml-4 mt-2 space-y-1 overflow-hidden"
                           >
+                            
                             {item.subItems.map((subItem) => (
                               <Link
                                 key={subItem.label}
@@ -188,6 +189,7 @@ const Navbar: React.FC = () => {
                               >
                                 {subItem.label}
                               </Link>
+                              
                             ))}
                           </motion.div>
                         )}

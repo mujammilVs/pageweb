@@ -13,11 +13,11 @@ export const navigationItems: NavItem[] = [
     href: "/products",
     subItems: [
       {
-        label: product1,
+        label: product2,
         href: "/products/digifabric",
       },
       {
-        label: product2,
+        label: product1,
         href: "/products/digidox",
       },
       {
@@ -38,14 +38,8 @@ export const navigationItems: NavItem[] = [
         label: "Core Platform Modernization",
         href: "/services/core-platform-modernization",
       },
-      {
-        label: "Digital Banking Services",
-        href: "/services/digital-banking",
-      },
-      {
-        label: "Banking Cloud Services",
-        href: "/services/banking-cloud",
-      },
+      { label: "Digital Banking Services", href: "/services/digital-banking" },
+      { label: "Banking Cloud Services", href: "/services/banking-cloud" },
     ],
   },
   {

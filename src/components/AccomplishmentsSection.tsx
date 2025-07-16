@@ -8,7 +8,7 @@ const AccomplishmentsSection: React.FC = () => {
     { icon: Users, value: '500+', label: 'Happy Clients' },
     { icon: Trophy, value: '50+', label: 'Awards Won' },
     { icon: Target, value: '1000+', label: 'Projects Completed' },
-    { icon: Calendar, value: '5+', label: 'Years Experience' },
+    { icon: Calendar, value: '15+', label: 'Years Experience' },
   ];
 
   return (

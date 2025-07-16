@@ -9,11 +9,11 @@ const SubNavbar: React.FC = () => {
       initial={{ opacity: 0, y: -20, scale: 0.98 }}
       animate={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ delay: 0.3, duration: 0.5, ease: "easeOut" }}
-      className="bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 text-white py-3 mt-16 shadow-lg "
+      className=" text-white py-1 mt-16 "
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row justify-between items-center space-y-2 sm:space-y-0">
-          <motion.div
+          {/* <motion.div
             className="flex items-center space-x-2"
             initial={{ x: -20, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
@@ -43,7 +43,7 @@ const SubNavbar: React.FC = () => {
                 <ArrowRight className="h-4 w-4" />
               </motion.div>
             </Link>
-          </motion.div>
+          </motion.div> */}
         </div>
       </div>
     </motion.div>

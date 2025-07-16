@@ -5,7 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { Mail, Phone, MapPin, Clock, Send, MessageSquare } from "lucide-react";
 // import { connectus, locateus } from "../data/content";
-import touchbanner from "../../src/assets/touch-in-banner.jpg";
+import touchbanner from "../../src/assets/touch-in-banner.png";
 import LocateUs from "../components/LocateUs";
 import Locate from "../components/Locate";
 
@@ -125,7 +125,7 @@ const Contact: React.FC = () => {
                     <input
                       {...register("firstName")}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="John"
+                      placeholder="FirstName"
                     />
                     {errors.firstName && (
                       <p className="mt-1 text-sm text-red-600">
@@ -140,7 +140,7 @@ const Contact: React.FC = () => {
                     <input
                       {...register("lastName")}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="Doe"
+                      placeholder="LastName"
                     />
                     {errors.lastName && (
                       <p className="mt-1 text-sm text-red-600">
@@ -158,7 +158,7 @@ const Contact: React.FC = () => {
                     {...register("email")}
                     type="email"
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="john@company.com"
+                    placeholder="mail@company.com"
                   />
                   {errors.email && (
                     <p className="mt-1 text-sm text-red-600">
@@ -175,7 +175,7 @@ const Contact: React.FC = () => {
                     <input
                       {...register("phone")}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="+1 (555) 123-4567"
+                      placeholder="+91 00 00 00 0000"
                     />
                     {errors.phone && (
                       <p className="mt-1 text-sm text-red-600">
@@ -190,7 +190,7 @@ const Contact: React.FC = () => {
                     <input
                       {...register("company")}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="Acme Corp"
+                      placeholder="Page Corp"
                     />
                     {errors.company && (
                       <p className="mt-1 text-sm text-red-600">
@@ -270,8 +270,8 @@ const Contact: React.FC = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900">Email</h4>
-                      <p className="text-gray-600">support@techcorp.com</p>
-                      <p className="text-gray-600">sales@techcorp.com</p>
+                      <p className="text-gray-600">info@pagesolutions.co.uk</p>
+                      <p className="text-gray-600">www.pagesolutions.co.uk</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-4">
@@ -280,8 +280,8 @@ const Contact: React.FC = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900">Phone</h4>
-                      <p className="text-gray-600">+1 (555) 123-4567</p>
-                      <p className="text-gray-600">+1 (555) 987-6543</p>
+                      <p className="text-gray-600">+91 8143578444</p>
+                      <p className="text-gray-600">+91 9849350532</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-4">
@@ -291,11 +291,10 @@ const Contact: React.FC = () => {
                     <div>
                       <h4 className="font-semibold text-gray-900">Address</h4>
                       <p className="text-gray-600">
-                        123 Innovation Street
-                        <br />
-                        Tech City, TC 12345
-                        <br />
-                        United States
+                        Plot No. 815, B.V.L. Complex, <br />
+                        4th Floor, 100Ft. Road, <br />
+                        Sri Swamy Ayyappa Co-operative Society,
+                        <br /> Madhapur, Hyderabad - 5000881.
                       </p>
                     </div>
                   </div>
@@ -310,9 +309,7 @@ const Contact: React.FC = () => {
                       <p className="text-gray-600">
                         Monday - Friday: 9:00 AM - 6:00 PM
                         <br />
-                        Saturday: 10:00 AM - 4:00 PM
-                        <br />
-                        Sunday: Closed
+                        Saturday - Sunday: Closed
                       </p>
                     </div>
                   </div>
@@ -324,13 +321,13 @@ const Contact: React.FC = () => {
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">
                   Our Location
                 </h3>
-                <div className="bg-gray-200 rounded-lg h-64 flex items-center justify-center">
-                  <div className="text-center">
-                    <MapPin className="h-12 w-12 text-gray-400 mx-auto mb-2" />
-                    <p className="text-gray-600">
-                      Interactive map would go here
-                    </p>
-                  </div>
+                <div className="bg-gray-200 rounded-lg h-64 overflow-hidden">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.843012816684!2d78.38826379678954!3d17.451619300000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91667f42ed11%3A0x501f641d013c0e79!2sPage%20Solutions%20Private%20Limited!5e1!3m2!1sen!2sin!4v1752549474605!5m2!1sen!2sin"
+                    width="600"
+                    height="450"
+                    loading="lazy"
+                  ></iframe>
                 </div>
               </div>
             </motion.div>

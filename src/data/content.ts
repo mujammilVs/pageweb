@@ -9,12 +9,12 @@ import page6 from "../../src/assets/page-images/page-worldwide-inc.webp";
 import info1 from "../../src/assets/page-images/info-1.png";
 import info2 from "../../src/assets/page-images/info-2.png";
 import info3 from "../../src/assets/page-images/info-3.png";
-import team1 from "../../src/assets/page-images/raghu-cheif.webp";
 import team2 from "../../src/assets/page-images/sridhar-ceo.webp";
 import team3 from "../../src/assets/page-images/krishna-member.webp";
-import banner1 from "../assets/page-images/banner1.webp";
-import banner2 from "../assets/page-images/banner2.jpeg";
-import banner3 from "../assets/page-images/banner3.jpeg";
+import banner1 from "../assets/page-images/arab1.jpg";
+import banner2 from "../assets/page-images/arab2.jpg";
+import banner3 from "../assets/page-images/arab3.jpg";
+import banner4 from "../assets/page-images/arab4.jpg";
 import product1 from "../assets/page-images/product1.jpeg";
 import product2 from "../assets/page-images/product2.webp";
 export const heroSlides: HeroSlide[] = [
@@ -60,7 +60,7 @@ export const heroSlides: HeroSlide[] = [
     subtitle: "TRANSFORM FOR TOMORROW",
     description:
       "Building robust, scalable applications with cutting-edge cloud technologies and industry best practices.",
-    image: banner3,
+    image: banner4,
     cta: {
       text: "CONSULT NOW",
       href: "/products",
@@ -81,6 +81,7 @@ export const services: ServiceCard[] = [
       "Technology Assessment",
       "Implementation Roadmap",
     ],
+    path: "/services/transformation-consulting",
   },
   {
     id: "2",
@@ -94,6 +95,7 @@ export const services: ServiceCard[] = [
       "Performance Optimization",
       "Security Enhancement",
     ],
+    path: "/services/core-platform-modernization",
   },
   {
     id: "3",
@@ -107,6 +109,7 @@ export const services: ServiceCard[] = [
       "Risk Management",
       "Compliance Solutions",
     ],
+    path: "/services/digital-banking",
   },
   {
     id: "4",
@@ -120,6 +123,7 @@ export const services: ServiceCard[] = [
       "Disaster Recovery",
       "Cost Optimization",
     ],
+    path: "/services/banking-cloud",
   },
 ];
 
@@ -137,6 +141,7 @@ export const products: ProductCard[] = [
     ],
     image: product1,
   },
+
   {
     id: "2",
     name: "Digidox",
@@ -166,19 +171,9 @@ export const products: ProductCard[] = [
 ];
 
 export const teamMembers: TeamMember[] = [
+
   {
     id: "1",
-    name: "Dr. Raghunath Seshadri",
-    role: "Cheif Executive Officer",
-    bio: "Visionary leader with 15+ years in digital transformation and fintech innovation.",
-    image: team1,
-    social: {
-      linkedin: "#",
-      twitter: "#",
-    },
-  },
-  {
-    id: "2",
     name: "Mr. Sridhar Dasari",
     role: "Cheif Operating Officer & Founder",
     bio: "Technology architect specializing in cloud-native solutions and enterprise systems.",
@@ -189,7 +184,7 @@ export const teamMembers: TeamMember[] = [
     },
   },
   {
-    id: "3",
+    id: "2",
     name: "Mr. Krishna Dasari",
     role: "Board Member",
     bio: "Product strategist with expertise in AI/ML and user experience design.",
@@ -354,5 +349,34 @@ export const aboutus1 = [
     logo: info3,
     description:
       "We continuously strive to be an IT services company using the power of technology to build better banks & Financial Institutions, that focus on the future. Institutions that strive to exceed their customer’s expectations.",
+  },
+];
+
+const tabs = [
+  {
+    title: "Right STRATEGY",
+    heading: "Banking Transformation STRATEGY",
+    description: `The questions we address for our clients in this process are:
+
+Ascertaining the current position, status, and readiness of people, processes, and systems will drive future STRATEGY. Developing a tailor-made strategic plan, obtaining stakeholder buy-in and executive commitment is critical at this stage. Page Solutions works closely with stakeholders to drive this initiative. We deliver client-centric assessment and current state analysis which coupled with current industry trends enables us to deliver a strategy that builds on growth levers and innovation.`,
+    img: sampleImg,
+  },
+  {
+    title: "Efficient PROCESSES",
+    heading: "Efficient Operational Processes",
+    description: "Content for efficient processes...",
+    img: sampleImg,
+  },
+  {
+    title: "Scalable SOLUTIONS",
+    heading: "Scalable Business Solutions",
+    description: "Content for scalable solutions...",
+    img: sampleImg,
+  },
+  {
+    title: "Transparent GOVERNANCE",
+    heading: "Transparent Governance Models",
+    description: "Content for transparent governance...",
+    img: sampleImg,
   },
 ];

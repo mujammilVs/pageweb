@@ -32,82 +32,8 @@ const TeamSection: React.FC = () => {
           </p>
         </motion.div>
 
-        {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {teamMembers.map((member, index) => (
-            <motion.div
-              key={member.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{
-                delay: index * 0.1,
-                duration: 0.5,
-                ease: "easeOut",
-              }}
-              whileHover={{
-                scale: 1.05,
-                y: -8,
-                transition: { type: "spring", stiffness: 300, damping: 20 },
-              }}
-              className="group"
-            >
-              <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:border-blue-200 hover:shadow-2xl transition-all duration-300">
-                <div className="relative">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-64 object-contain group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <motion.div
-                    className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"
-                    initial={{ opacity: 0 }}
-                    whileHover={{ opacity: 1 }}
-                    transition={{ duration: 0.3 }}
-                  ></motion.div>
-                  <motion.div
-                    className="absolute bottom-4 left-4 right-4"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileHover={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.3, delay: 0.1 }}
-                  >
-                    <div className="flex space-x-2">
-                      {member.social.linkedin && (
-                        <motion.a
-                          href={member.social.linkedin}
-                          className="p-2 bg-white/20 rounded-full hover:bg-gradient-to-r hover:from-blue-500 hover:to-cyan-500 transition-all duration-200 backdrop-blur-sm"
-                          whileHover={{ scale: 1.1 }}
-                          whileTap={{ scale: 0.9 }}
-                        >
-                          <Linkedin className="h-4 w-4 text-white" />
-                        </motion.a>
-                      )}
-                      {member.social.twitter && (
-                        <motion.a
-                          href={member.social.twitter}
-                          className="p-2 bg-white/20 rounded-full hover:bg-gradient-to-r hover:from-blue-500 hover:to-cyan-500 transition-all duration-200 backdrop-blur-sm"
-                          whileHover={{ scale: 1.1 }}
-                          whileTap={{ scale: 0.9 }}
-                        >
-                          <Twitter className="h-4 w-4 text-white" />
-                        </motion.a>
-                      )}
-                    </div>
-                  </motion.div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    {member.name}
-                  </h3>
-                  <p className="text-transparent bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text font-medium mb-3">
-                    {member.role}
-                  </p>
-                  <p className="text-gray-600 text-sm">{member.bio}</p>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div> */}
-        <div className="flex flex-wrap justify-center gap-6 md:gap-8">
+       
+        {/* <div className="flex flex-wrap justify-center gap-6 md:gap-8">
           {teamMembers.map((member, index) => (
             <motion.div
               key={member.id}
@@ -173,15 +99,81 @@ const TeamSection: React.FC = () => {
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
                     {member.name}
                   </h3>
-                  <p className="text-transparent bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text font-medium mb-3">
-                    {member.role}
-                  </p>
-                  {/* <p className="text-gray-600 text-sm">{member.bio}</p> */}
+  
                 </div>
               </div>
             </motion.div>
           ))}
+        </div> */}
+        <div className="flex flex-wrap justify-center gap-8 py-10">
+  {teamMembers.map((member, index) => (
+    <motion.div
+      key={member.id}
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay: index * 0.1, duration: 0.6, ease: "easeOut" }}
+      whileHover={{
+        y: -6,
+        scale: 1.04,
+        transition: { type: "spring", stiffness: 200, damping: 16 },
+      }}
+      className="w-full sm:w-[46%] lg:w-[22%] group transition-all"
+    >
+      <div className="relative flex flex-col items-center bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl hover:border-blue-200 p-6 transition-all duration-300">
+        {/* Avatar */}
+        <div className="relative w-32 h-32 -mt-20 mb-4 rounded-full overflow-hidden shadow-md border-4 border-blue-100 group-hover:scale-105 transition-transform duration-300">
+          <img
+            src={member.image}
+            alt={member.name}
+            className="w-full h-full object-contain"
+          />
+          <motion.div
+            className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+            initial={{ opacity: 0 }}
+            whileHover={{ opacity: 1 }}
+            transition={{ duration: 0.3 }}
+          />
         </div>
+
+        {/* Info */}
+        <div className="text-center">
+          <h3 className="text-lg font-semibold text-gray-900">
+            {member.name}
+          </h3>
+        
+        </div>
+
+        {/* Socials */}
+        <div className="mt-4 flex space-x-3">
+          {member.social.linkedin && (
+            <motion.a
+              href={member.social.linkedin}
+              target="_blank"
+              className="p-2 bg-white border border-gray-200 rounded-full hover:bg-gradient-to-r hover:from-blue-600 hover:to-cyan-500 transition-all backdrop-blur-md"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <Linkedin className="h-4 w-4 text-gray-700 " />
+            </motion.a>
+          )}
+          {member.social.twitter && (
+            <motion.a
+              href={member.social.twitter}
+              target="_blank"
+              className="p-2 bg-white border border-gray-200 rounded-full hover:bg-gradient-to-r hover:from-blue-600 hover:to-cyan-500 transition-all backdrop-blur-md"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <Twitter className="h-4 w-4 text-gray-700 " />
+            </motion.a>
+          )}
+        </div>
+      </div>
+    </motion.div>
+  ))}
+</div>
+
       </div>
     </section>
   );
