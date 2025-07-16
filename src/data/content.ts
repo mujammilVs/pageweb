@@ -17,6 +17,8 @@ import banner3 from "../assets/page-images/arab3.jpg";
 import banner4 from "../assets/page-images/arab4.jpg";
 import product1 from "../assets/page-images/product1.jpeg";
 import product2 from "../assets/page-images/product2.webp";
+
+import sample1 from "../assets/page-images/arab3.jpg";
 export const heroSlides: HeroSlide[] = [
   {
     id: "1",
@@ -171,7 +173,6 @@ export const products: ProductCard[] = [
 ];
 
 export const teamMembers: TeamMember[] = [
-
   {
     id: "1",
     name: "Mr. Sridhar Dasari",
@@ -352,31 +353,31 @@ export const aboutus1 = [
   },
 ];
 
-const tabs = [
+export const tabs = [
   {
     title: "Right STRATEGY",
     heading: "Banking Transformation STRATEGY",
     description: `The questions we address for our clients in this process are:
 
 Ascertaining the current position, status, and readiness of people, processes, and systems will drive future STRATEGY. Developing a tailor-made strategic plan, obtaining stakeholder buy-in and executive commitment is critical at this stage. Page Solutions works closely with stakeholders to drive this initiative. We deliver client-centric assessment and current state analysis which coupled with current industry trends enables us to deliver a strategy that builds on growth levers and innovation.`,
-    img: sampleImg,
+    img: sample1,
   },
   {
     title: "Efficient PROCESSES",
     heading: "Efficient Operational Processes",
     description: "Content for efficient processes...",
-    img: sampleImg,
+    img: sample1,
   },
   {
     title: "Scalable SOLUTIONS",
     heading: "Scalable Business Solutions",
     description: "Content for scalable solutions...",
-    img: sampleImg,
+    img: sample1,
   },
   {
     title: "Transparent GOVERNANCE",
     heading: "Transparent Governance Models",
     description: "Content for transparent governance...",
-    img: sampleImg,
+    img: sample1,
   },
 ];
